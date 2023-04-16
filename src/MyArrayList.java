@@ -22,7 +22,12 @@ public class MyArrayList<T> implements MyList<T> {
 
     @Override
     public void add(T item) {
+        if (size == arr.length) {
+            T[] newArr = (T[]) new Object[arr.length * 2];
+            for (int i = 0; i < arr.length; i++) {
 
+            }
+        }
     }
 
     @Override
