@@ -1,17 +1,22 @@
 public class MyArrayList<T> implements MyList<T> {
     private T[] arr;
     private int size;
-    MyArrayList(){
+    public MyArrayList(){
         this.arr= (T[]) new Object[5] ;
         this.size= 0;
     }
     @Override
     public int size() {
-        return 0;
+        return size;
     }
 
     @Override
     public boolean contains(Object o) {
+        for (int i = 0; i < size; i++) {
+            if (arr[i].equals(o)) {
+                return true;
+            }
+        }
         return false;
     }
 
