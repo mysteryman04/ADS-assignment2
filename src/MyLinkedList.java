@@ -84,7 +84,23 @@ public class MyLinkedList<T> implements MyList<T>{
     }
 
     @Override
-    public boolean remove(T element) {
+    public boolean remove(Object o) {
+        Node current = head;
+        while (current != null) {
+            if (current.element.equals(o)) {
+                if (current == head) {
+                    head = current.next;
+                } else if (current == tail) {
+                    tail = current.prev;
+                } else {
+                    current.prev.next = current.next;
+                    current.next.prev = current.prev;
+                }
+                size--;
+                return true;
+            }
+            current = current.next;
+        }
         return false;
     }
 
