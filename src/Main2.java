@@ -7,8 +7,9 @@ public class Main2 {
         m.add(87);
         m.add(45);
         System.out.println(m.contains(23));
-        m.clear();
-        System.out.println(m.contains(23));
+//        m.clear();
+//        System.out.println(m.contains(23));
+        System.out.println(m.get(3));
 
     }
 }

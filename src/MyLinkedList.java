@@ -54,7 +54,33 @@ public class MyLinkedList<T> implements MyList<T>{
 
     @Override
     public void add(T element, int index) {
+        checkIndex(index);
+        Node newNode = new Node(element);
 
+        if (index == 0) {
+            if (size == 0) {
+                head = newNode;
+                tail = newNode;
+            } else {
+                newNode.next = head;
+                head.prev = newNode;
+                head = newNode;
+            }
+        } else if (index == size) {
+            newNode.prev = tail;
+            tail.next = newNode;
+            tail = newNode;
+        } else {
+            Node current = head;
+            for (int i = 0; i < index; i++) {
+                current = current.next;
+            }
+            newNode.prev = current.prev;
+            newNode.next = current;
+            current.prev.next = newNode;
+            current.prev = newNode;
+        }
+        size++;
     }
 
     @Override
