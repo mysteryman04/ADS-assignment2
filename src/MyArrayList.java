@@ -23,11 +23,7 @@ public class MyArrayList<T> implements MyList<T> {
     @Override
     public void add(T item) {
         if (size == arr.length) {
-            T[] newArr = (T[]) new Object[arr.length * 2];
-            for (int i = 0; i < arr.length; i++) {
-                newArr[i] = arr[i];
-            }
-            arr = newArr;
+            increase();
         }
         arr[size++] = item;
     }
@@ -70,6 +66,14 @@ public class MyArrayList<T> implements MyList<T> {
     @Override
     public void sort() {
 
+    }
+
+    public void increase(){
+        T[] newArr = (T[]) new Object[arr.length * 2];
+        for (int i = 0; i < arr.length; i++) {
+            newArr[i] = arr[i];
+        }
+        arr = newArr;
     }
 }
 

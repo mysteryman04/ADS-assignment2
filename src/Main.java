@@ -5,10 +5,10 @@ public class Main {
         m.add(87);
         m.add(87);
         m.add(87);
-        System.out.println(m.getElement(2));
-//        m.clear();
-//        System.out.println(m.getElement(2));
-        m.delete(int index);
-        System.out.println(m.getElement(int index));
+        System.out.println(m.get(2));
+        m.clear();
+        System.out.println(m.get(2));
+        m.remove(int index);
+        System.out.println(m.get(int index));
     }
 }
