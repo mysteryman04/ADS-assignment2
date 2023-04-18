@@ -53,7 +53,8 @@ public class MyArrayList<T> implements MyList<T> {
 
     @Override
     public void clear() {
-
+        arr = (T[]) new Object[5];
+        size = 0;
     }
 
     @Override
