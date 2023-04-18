@@ -23,7 +23,7 @@ public class MyLinkedList<T> implements MyList<T>{
 
     @Override
     public int size() {
-        return 0;
+        return size;
     }
 
     @Override
@@ -32,17 +32,26 @@ public class MyLinkedList<T> implements MyList<T>{
     }
 
     @Override
-    public void add(T item) {
+    public void add(T element) {
+        Node newNode = new Node(element);
+        if (size == 0) {
+            head = newNode;
+            tail = newNode;
+        } else {
+            newNode.prev = tail;
+            tail.next = newNode;
+            tail = newNode;
+        }
+        size++;
+    }
+
+    @Override
+    public void add(T element, int index) {
 
     }
 
     @Override
-    public void add(T item, int index) {
-
-    }
-
-    @Override
-    public boolean remove(T item) {
+    public boolean remove(T element) {
         return false;
     }
 
