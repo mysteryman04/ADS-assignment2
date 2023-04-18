@@ -38,12 +38,17 @@ public class MyArrayList<T> implements MyList<T> {
 
     @Override
     public boolean remove(T item) {
+        for (int i = 0; i < size; i++) {
+            if (arr[i].equals(item)) {
+                remove(i);
+                return true;
+            }
+        }
         return false;
     }
 
     @Override
-    public T remove(int index) {
-        return null;
+    public T remove(int index) {return null;
     }
 
     @Override
