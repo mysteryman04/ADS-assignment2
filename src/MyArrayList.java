@@ -34,10 +34,15 @@ public class MyArrayList<T> implements MyList<T> {
 
     @Override
     public void add(T item, int index) {
+        checkIndex(index);
         if (size == arr.length) {
             increase();
         }
-        checkIndex(index);
+        for (int i = size - 1; i >= index; i--) {
+            arr[i + 1] = arr[i];
+        }
+        arr[index] = item;
+        size++;
     }
 
     @Override
@@ -53,7 +58,14 @@ public class MyArrayList<T> implements MyList<T> {
 
     @Override
     public T remove(int index) {
-        return null;
+        checkIndex(index);
+        T removedElement = arr[index];
+        for (int i = index; i < size - 1; i++) {
+            arr[i] = arr[i + 1];
+        }
+        arr[size - 1] = null;
+        size--;
+        return removedElement;
     }
 
     @Override
