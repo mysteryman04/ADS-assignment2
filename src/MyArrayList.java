@@ -30,6 +30,12 @@ public class MyArrayList<T> implements MyList<T> {
 
     @Override
     public void add(T item, int index) {
+        if (size == arr.length) {
+            increase();
+        }
+        if (index < 0 || index >= size) {
+            throw new IndexOutOfBoundsException();
+        }
 
     }
 
