@@ -1,10 +1,12 @@
 public class MyArrayList<T> implements MyList<T> {
     private T[] arr;
     private int size;
-    public MyArrayList(){
-        this.arr= (T[]) new Object[5] ;
-        this.size= 0;
+
+    public MyArrayList() {
+        this.arr = (T[]) new Object[5];
+        this.size = 0;
     }
+
     @Override
     public int size() {
         return size;
@@ -48,7 +50,8 @@ public class MyArrayList<T> implements MyList<T> {
     }
 
     @Override
-    public T remove(int index) {return null;
+    public T remove(int index) {
+        return null;
     }
 
     @Override
@@ -65,7 +68,12 @@ public class MyArrayList<T> implements MyList<T> {
 
     @Override
     public int indexOf(Object o) {
-        return 0;
+        for (int i = 0; i < size; i++) {
+            if (arr[i].equals(o)) {
+                return i;
+            }
+        }
+        return -1;
     }
 
     @Override
