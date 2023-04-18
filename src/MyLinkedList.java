@@ -1,16 +1,67 @@
-//public class MyLinkedList {
-//}
-//
-//
-//MyLinkedList:
-//        1 Create a new class called MyLinkedList that implements the List interface.
-//        2 Define a private inner class called Node that contains an element of type E and references to the next and previous nodes in the list.
-//        3 Define a private instance variable called head that references the first node in the list.
-//        4 Define a private instance variable called tail that references the last node in the list.
-//        5 Define an int variable called size to keep track of the number of elements in the list.
-//        6 Implement the add(E element) method by creating a new Node with the specified element, setting its next reference to null (since it will be the new tail), and its previous reference to the current tail. If the list is empty, set both the head and tail references to the new node. Otherwise, set the next reference of the current tail to the new node and update the tail reference to the new node. Finally, increment the size variable.
-//        7 Implement the get(int index) method by traversing the list from the head (or tail, depending on which is closer to the specified index) and returning the element at the specified index.
-//        8 Implement the remove(int index) method by first traversing the list to the node at the specified index. Then, update the next and previous references of the surrounding nodes to remove the node from the list, and decrement the size variable.
-//        9 Implement the size() method by returning the size variable.
-//        10 Implement any other methods specified by the List interface.
-//        11 Test all methods of MyLinkedList
+public class MyLinkedList<T> implements MyList<T>{
+    private class Node {
+        T element;
+        Node next;
+        Node prev;
+
+        public Node(T element) {
+            this.element = element;
+            this.next = null;
+            this.prev = null;
+        }
+    }
+    @Override
+    public int size() {
+        return 0;
+    }
+
+    @Override
+    public boolean contains(Object o) {
+        return false;
+    }
+
+    @Override
+    public void add(T item) {
+
+    }
+
+    @Override
+    public void add(T item, int index) {
+
+    }
+
+    @Override
+    public boolean remove(T item) {
+        return false;
+    }
+
+    @Override
+    public T remove(int index) {
+        return null;
+    }
+
+    @Override
+    public void clear() {
+
+    }
+
+    @Override
+    public T get(int index) {
+        return null;
+    }
+
+    @Override
+    public int indexOf(Object o) {
+        return 0;
+    }
+
+    @Override
+    public int lastIndexOf(Object o) {
+        return 0;
+    }
+
+    @Override
+    public void sort() {
+
+    }
+}
