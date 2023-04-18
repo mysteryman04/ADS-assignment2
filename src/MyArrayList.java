@@ -33,10 +33,7 @@ public class MyArrayList<T> implements MyList<T> {
         if (size == arr.length) {
             increase();
         }
-        if (index < 0 || index >= size) {
-            throw new IndexOutOfBoundsException();
-        }
-
+        checkIndex(index);
     }
 
     @Override
@@ -56,7 +53,8 @@ public class MyArrayList<T> implements MyList<T> {
 
     @Override
     public T get(int index) {
-        return null;
+        checkIndex(index);
+        return arr[index];
     }
 
     @Override
@@ -80,6 +78,12 @@ public class MyArrayList<T> implements MyList<T> {
             newArr[i] = arr[i];
         }
         arr = newArr;
+    }
+
+    public void checkIndex(int index){
+        if (index < 0 || index >= size) {
+            throw new IndexOutOfBoundsException();
+        }
     }
 }
 
