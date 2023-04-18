@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class MyArrayList<T> implements MyList<T> {
     private T[] arr;
     private int size;
@@ -88,7 +90,7 @@ public class MyArrayList<T> implements MyList<T> {
 
     @Override
     public void sort() {
-
+        Arrays.sort(arr, 0, size);
     }
 
     public void increase(){
