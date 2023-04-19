@@ -12,5 +12,6 @@ public class Main2 {
 //        System.out.println(m.contains(23));
         System.out.println(m.get(3));
         m.add(23,3);
+
     }
 }
