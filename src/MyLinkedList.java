@@ -156,7 +156,6 @@ public class MyLinkedList<T> implements MyList<T>{
 
     @Override
     public void sort() {
-
     }
 
     public void checkIndex(int index){
@@ -164,4 +163,14 @@ public class MyLinkedList<T> implements MyList<T>{
             throw new IndexOutOfBoundsException("Index out of bounds: " + index);
         }
     }
+
+    public void display() {
+        Node current = head;
+        while (current != null) {
+            System.out.print(current.element + " ");
+            current = current.next;
+        }
+        System.out.println();
+    }
+
 }
