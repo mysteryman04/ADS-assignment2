@@ -105,6 +105,9 @@ public class MyArrayList<T> implements MyList<T> {
         Arrays.sort(arr, 0, size);
     }
 
+
+
+
     public void increase(){
         T[] newArr = (T[]) new Object[arr.length * 2];
         for (int i = 0; i < arr.length; i++) {
@@ -117,6 +120,24 @@ public class MyArrayList<T> implements MyList<T> {
         if (index < 0 || index >= size) {
             throw new IndexOutOfBoundsException();
         }
+    }
+    @Override
+    public void addAll(T item) {
+        T[] newArray = (T[]) new Object[arr.length];
+        int index = 0;
+        checkIndex(index);
+        if (size == arr.length) {
+            increase();
+        }
+        for (int i = size-1; i>= index; i--) {
+            arr[i+1] = arr[i];
+        }
+        arr[index]=item;
+        size++;
+        for (int i = 0; i < newArray.length; i++) {
+            System.out.println(newArray[i]);
+        }
+
     }
 }
 
