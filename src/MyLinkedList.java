@@ -197,8 +197,6 @@ public class MyLinkedList<T> implements MyList<T>{
         System.out.println();
     }
 
-    public void addAll(){
-
-    }
+    public void a
 
 }

@@ -105,7 +105,10 @@ public class MyArrayList<T> implements MyList<T> {
         Arrays.sort(arr, 0, size);
     }
 
+    @Override
+    public void addAll() {
 
+    }
 
 
     public void increase(){
