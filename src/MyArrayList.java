@@ -140,7 +140,10 @@ public class MyArrayList<T> implements MyList<T> {
         for (int i = 0; i < newArray.length; i++) {
             System.out.println(newArray[i]);
         }
-
     }
+    public boolean isEmpty() {
+        return size == 0;
+    }
+
 }
 
