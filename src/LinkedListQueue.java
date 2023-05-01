@@ -29,11 +29,11 @@ public class LinkedListQueue<T> implements MyQueue {
 
     @Override
     public boolean isEmpty() {
-        return false;
+        return list.isEmpty();
     }
 
     @Override
     public int size() {
-        return 0;
+        return list.size();
     }
 }
