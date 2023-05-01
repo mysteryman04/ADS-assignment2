@@ -1,4 +1,5 @@
 public class MyLinkedList<T> implements MyList<T>{
+
     private class Node {
         T element;
         Node next;
@@ -19,6 +20,19 @@ public class MyLinkedList<T> implements MyList<T>{
         head = null;
         tail = null;
         size = 0;
+    }
+
+    public void addFirst(T item) {
+        Node newNode = new Node(item);
+        if (head == null) {
+            head = newNode;
+            tail = newNode;
+        } else {
+            newNode.next = head;
+            head.prev = newNode;
+            head = newNode;
+        }
+        size++;
     }
 
     @Override
