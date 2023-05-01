@@ -19,8 +19,11 @@ public class ArrayListQueue<T> implements MyQueue{
     }
 
     @Override
-    public Object peek() {
-        return null;
+    public T peek() throws NoSuchElementException {
+        if (isEmpty()) {
+            throw new NoSuchElementException("Queue is empty");
+        }
+        return list.get(0);
     }
 
     @Override
