@@ -6,6 +6,8 @@ public class MainStack {
         stack.push(2);
         stack.push(3);
 
+        int popped = stack.pop();
+        System.out.println("Popped element: " + popped);
     }
 
 }
