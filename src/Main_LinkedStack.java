@@ -1,4 +1,4 @@
-public class MainStack {
+public class Main_LinkedStack {
     public static void main(String[] args) {
         MyLinkedListStack<Integer> stack = new MyLinkedListStack<>();
 
