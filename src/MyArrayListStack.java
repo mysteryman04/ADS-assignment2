@@ -23,5 +23,7 @@ public class MyArrayListStack<T> {
     public boolean isEmpty() {
         return stackList.isEmpty();
     }
-
+    public int size(){
+        return stackList.size();
+    }
 }
