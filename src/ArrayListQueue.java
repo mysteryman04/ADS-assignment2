@@ -33,6 +33,6 @@ public class ArrayListQueue<T> implements MyQueue{
 
     @Override
     public int size() {
-        return 0;
+        return list.size();
     }
 }
