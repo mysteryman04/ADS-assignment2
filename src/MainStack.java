@@ -10,7 +10,7 @@ public class MainStack {
 //        System.out.println("Popped element: " + popped);
         int peeked = stack.peek();
         System.out.println("Peeked element: " + peeked);
-
+        System.out.println("Size of stack: " + stack.size());
     }
 
 }
