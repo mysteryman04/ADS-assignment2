@@ -21,7 +21,10 @@ public class LinkedListQueue<T> implements MyQueue {
 
     @Override
     public Object peek() {
-        return null;
+        if (isEmpty()) {
+            throw new NoSuchElementException("Queue is empty");
+        }
+        return list.getFirst();
     }
 
     @Override
