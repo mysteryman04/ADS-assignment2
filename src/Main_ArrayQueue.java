@@ -7,6 +7,10 @@ public class Main_ArrayQueue {
         queue.enqueue(30);
         System.out.println("Dequeued element: " + queue.dequeue());
         System.out.println("Peeked element: " + queue.peek());
+        System.out.println("Is queue empty? " + queue.isEmpty());
+        while (!queue.isEmpty()) {
+            System.out.println("Dequeued element: " + queue.dequeue());
+        }
 
     }
 }
