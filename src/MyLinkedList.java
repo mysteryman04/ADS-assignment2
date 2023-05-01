@@ -58,6 +58,13 @@ public class MyLinkedList<T> implements MyList<T>{
         return removedElement;
     }
 
+    public T getFirst() {
+        if (head == null) {
+            throw new NoSuchElementException("Cannot get first element from an empty list");
+        }
+        return head.element;
+    }
+
     @Override
     public int size() {
         return size;

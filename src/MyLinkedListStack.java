@@ -18,4 +18,11 @@ public class MyLinkedListStack<T> {
     public boolean isEmpty() {
         return stackList.isEmpty();
     }
+    public T peek() {
+        if (isEmpty()) {
+            throw new EmptyStackException();
+        }
+        return stackList.getFirst();
+    }
+
 }
