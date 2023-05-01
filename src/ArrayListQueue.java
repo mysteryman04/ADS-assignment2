@@ -11,8 +11,11 @@ public class ArrayListQueue<T> implements MyQueue{
     }
 
     @Override
-    public Object dequeue() {
-        return null;
+    public Object dequeue() throws NoSuchElementException {
+        if (isEmpty()) {
+            throw new NoSuchElementException("Queue is empty");
+        }
+        return list.remove(0);
     }
 
     @Override
