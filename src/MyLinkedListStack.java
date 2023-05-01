@@ -9,5 +9,13 @@ public class MyLinkedListStack<T> {
     public void push(T item) {
         stackList.addFirst(item);
     }
-
+    public T pop() {
+        if (isEmpty()) {
+            throw new EmptyStackException();
+        }
+        return stackList.removeFirst();
+    }
+    public boolean isEmpty() {
+        return stackList.isEmpty();
+    }
 }

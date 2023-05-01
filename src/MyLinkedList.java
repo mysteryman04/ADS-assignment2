@@ -1,4 +1,7 @@
+import java.util.NoSuchElementException;
+
 public class MyLinkedList<T> implements MyList<T>{
+
 
     private class Node {
         T element;
@@ -33,6 +36,26 @@ public class MyLinkedList<T> implements MyList<T>{
             head = newNode;
         }
         size++;
+    }
+    public boolean isEmpty() {
+        return head == null;
+    }
+
+    public T removeFirst() {
+        if (head == null) {
+            throw new NoSuchElementException("Cannot remove from an empty list");
+        }
+
+        T removedElement = head.element;
+        if (head == tail) {
+            head = null;
+            tail = null;
+        } else {
+            head = head.next;
+            head.prev = null;
+        }
+        size--;
+        return removedElement;
     }
 
     @Override
